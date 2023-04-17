@@ -9,6 +9,7 @@ namespace ChroMapper_PropEdit {
 public class Plugin {
 	public static MainWindow main;
 	public static SettingsController settings;
+	public static GizmoController gizmos;
 	
 	[Init]
 	private void Init() {
@@ -16,6 +17,7 @@ public class Plugin {
 		SceneManager.sceneLoaded += SceneLoaded;
 		main = new MainWindow();
 		settings = new SettingsController();
+		gizmos = new GizmoController();
 	}
 	
 	private void SceneLoaded(Scene scene, LoadSceneMode mode) {
